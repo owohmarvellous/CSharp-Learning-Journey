@@ -27,6 +27,8 @@ public class NumberGuess
         Console.WriteLine("CONGRATS...! YOU GOT THE NUMBER");
 
     }
+
+    // I tried creating the game using for loop 
     public static void ForGuess()
     {
         int hiddenNumber = 4;
@@ -37,7 +39,7 @@ public class NumberGuess
         for (; Guess != hiddenNumber;)
         {
             Console.WriteLine("Wrong try another number");
-            Console.Write("Enter a number between 1 and 10: ");
+            Console.Write("Enter a number between 1 and 10: ");  //Repeats the prompt until the right number is entered
             Guess = Convert.ToInt32(Console.ReadLine());
 
         }
