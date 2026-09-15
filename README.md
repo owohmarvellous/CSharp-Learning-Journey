@@ -31,10 +31,10 @@ My goal is to become highly proficient in:
 - [x] For Loops
 - [x]While Loops
 - [x] Do-While Loops
-- [ ] Methods
-- [ ] Arrays
-- [ ] Collections
-- [ ] Classes & Objects
+- [x] Methods
+- [x] Arrays
+- [x] Collections
+- [x] Classes & Objects
 - [ ] Object-Oriented Programming
 - [ ] Exception Handling
 - [ ] LINQ
@@ -86,8 +86,8 @@ MyApp/
 | Switch Statements | ✅ Completed          |
 | For Loops         | ✅ Completed          |
 | While Loops       | ✅ Completed          |
-| Methods           | 🔄 Currently Learning |
-| OOP               | ⏳ Upcoming           |
+| Methods           | ✅ Completed          |
+| OOP               | 🔄 Currently Learning |
 | ASP.NET Core      | ⏳ Upcoming           |
 
 ## 🛠️ Tools
@@ -130,4 +130,4 @@ I will continuously update this repository as I learn new concepts and build new
 
 **Started:** 2026
 
-**Current Focus:** Methods
+**Current Focus:** Object Oriented Programming
