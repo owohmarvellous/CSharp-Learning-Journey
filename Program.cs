@@ -100,4 +100,36 @@ studentRecord1.PrintInfo();
 // Console.WriteLine($"New GPA: {studentRecord1.GetGpa()}");
 
 
+Patient patient = new Patient();
+patient.Name = "Victory";
+// patient.Age = 34;
+patient.Gender = "Male";
+patient.Height = 6.55m;
 
+patient.GetAge();
+patient.SetAge(34);
+
+// You can also use the method from the base class
+patient.Introduce();
+
+Console.WriteLine($"Height:{patient.Height}");
+
+Cleaner cleaner = new Cleaner();
+cleaner.Name = "Mary";
+cleaner.Clean();
+
+Doctor doctor = new Doctor();
+doctor.Name = "Mike";
+doctor.Gender = "Male";
+doctor.GetAge();
+doctor.SetAge(45);
+
+doctor.Introduce();
+
+Nurse nurse = new Nurse();
+nurse.Name = "Lucy";
+nurse.Gender = " Female";
+
+nurse.GetAge();
+nurse.SetAge(40);
+nurse.Introduce();
