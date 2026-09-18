@@ -89,4 +89,15 @@ studentGrade2.PrintInfo();
 bool honor = studentGrade2.IsHonorRoll();
 Console.WriteLine($"Is the student an honor student? {honor}");
 
+StudentRecord studentRecord1 = new StudentRecord("Victor", 18, "Physics", 4.50m);
+studentRecord1.PrintInfo();
+// Console.WriteLine(studentRecord1.GetGpa());
+// Console.WriteLine($"Name: {studentRecord1.Name}");
+// Console.WriteLine($"Course: {studentRecord1.Course}");
+// studentRecord1.SetAge(33);
+// Console.WriteLine($"Age: {studentRecord1.GetAge()}");
+// studentRecord1.SetGpa(3.45m);
+// Console.WriteLine($"New GPA: {studentRecord1.GetGpa()}");
+
+
 
