@@ -152,3 +152,22 @@ carpenter.Name = "Favour";
 carpenter.Job = " Carpenter";
 
 carpenter.Introduce();
+
+ICar toyota = new Toyota();
+ICar lexus = new Lexus();
+
+toyota.Identify();
+lexus.Identify();
+
+// you cannot create an abtstract class object directly
+// Animal animal = new Animal(); ---> this wont work
+Animal dog = new Dog();
+dog.animalName = "Dog";
+dog.Sound = "Barks";
+
+dog.MakeSound();
+Animal lion = new Lion();
+lion.animalName = "Dog";
+lion.Sound = "Barks";
+
+lion.MakeSound();
