@@ -5,6 +5,7 @@ using Myapp.ControFlow;
 using MyApp.ControlFlow;
 using MyApp.NumberGuess;
 using OOP;
+using OOP.StudentManagementS;
 // IfStatement.Run();
 // ElseIf.Run();
 // Switch.Run();
@@ -171,3 +172,12 @@ lion.animalName = "Dog";
 lion.Sound = "Barks";
 
 lion.MakeSound();
+
+// List<Student> students = new List<Student>();
+//  DisplayStudents(students)
+
+
+// This is the main entry point of the application. It creates an instance of the StudentManagementSystem class and calls its Run method to start the application.
+StudentManagementSystem system = new StudentManagementSystem();
+
+system.Run();
