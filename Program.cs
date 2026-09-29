@@ -1,12 +1,13 @@
 ﻿using System.Runtime.CompilerServices;
 using Collections;
+using ExceptionHandling;
 using Generics;
 using Methods;
 using Myapp.ControFlow;
 using MyApp.ControlFlow;
 using MyApp.NumberGuess;
-using OOP;
-using OOP.StudentManagementS;
+// using OOP;
+// using OOP.StudentManagementS;
 // IfStatement.Run();
 // ElseIf.Run();
 // Switch.Run();
@@ -136,50 +137,50 @@ using OOP.StudentManagementS;
 // nurse.SetAge(40);
 // nurse.Introduce();
 
-Occupation occupation = new Occupation();
-occupation.Name = "Luke";
-occupation.Job = " Engineer";
+// Occupation occupation = new Occupation();
+// occupation.Name = "Luke";
+// occupation.Job = " Engineer";
 
-occupation.Introduce();
+// occupation.Introduce();
 
-// We can write the object like this because of inheritance.
-Occupation lecturer = new Lecturer();
-lecturer.Name = "Mike";
-lecturer.Job = " Lecturer";
+// // We can write the object like this because of inheritance.
+// Occupation lecturer = new Lecturer();
+// lecturer.Name = "Mike";
+// lecturer.Job = " Lecturer";
 
-lecturer.Introduce();
+// lecturer.Introduce();
 
-Occupation carpenter = new Carpenter();
-carpenter.Name = "Favour";
-carpenter.Job = " Carpenter";
+// Occupation carpenter = new Carpenter();
+// carpenter.Name = "Favour";
+// carpenter.Job = " Carpenter";
 
-carpenter.Introduce();
+// carpenter.Introduce();
 
-ICar toyota = new Toyota();
-ICar lexus = new Lexus();
+// ICar toyota = new Toyota();
+// ICar lexus = new Lexus();
 
-toyota.Identify();
-lexus.Identify();
+// toyota.Identify();
+// lexus.Identify();
 
-// you cannot create an abtstract class object directly
-// Animal animal = new Animal(); ---> this wont work
-Animal dog = new Dog();
-dog.animalName = "Dog";
-dog.Sound = "Barks";
+// // you cannot create an abtstract class object directly
+// // Animal animal = new Animal(); ---> this wont work
+// Animal dog = new Dog();
+// dog.animalName = "Dog";
+// dog.Sound = "Barks";
 
-dog.MakeSound();
-Animal lion = new Lion();
-lion.animalName = "Dog";
-lion.Sound = "Barks";
+// dog.MakeSound();
+// Animal lion = new Lion();
+// lion.animalName = "Dog";
+// lion.Sound = "Barks";
 
-// lion.MakeSound();
+// // lion.MakeSound();
 
-// List<Student> students = new List<Student>();
-//  DisplayStudents(students)
+// // List<Student> students = new List<Student>();
+// //  DisplayStudents(students)
 
 
-// This is the main entry point of the application. It creates an instance of the StudentManagementSystem class and calls its Run method to start the application.
-StudentManagementSystem system = new StudentManagementSystem();
+// // This is the main entry point of the application. It creates an instance of the StudentManagementSystem class and calls its Run method to start the application.
+// StudentManagementSystem system = new StudentManagementSystem();
 
 // system.Run();
 
@@ -191,18 +192,41 @@ genericmethods.Print("Welcome to Generics");
 genericmethods.Print(true);
 genericmethods.Print(16.3);
 
-Box<int> intBox = new Box<int>(42);
-Box<string> stringBox = new Box<string>("This is Generics in a class");
-Box<double> doubleBox = new Box<double>(3.14);
+// Box<int> intBox = new Box<int>(42);
+// Box<string> stringBox = new Box<string>("This is Generics in a class");
+// Box<double> doubleBox = new Box<double>(3.14);
 
-intBox.PrintValue();
-stringBox.PrintValue();
-doubleBox.PrintValue();
+// intBox.PrintValue();
+// stringBox.PrintValue();
+// doubleBox.PrintValue();
 
-GenericStorage<int> intStorage = GenericStorage<int>.Create(455);
-GenericStorage<string> stringStorage = GenericStorage<string>.Create("Hello, Generics!");
-GenericStorage<double> doubleStorage = GenericStorage<double>.Create(44.69);
+// GenericStorage<int> intStorage = GenericStorage<int>.Create(455);
+// GenericStorage<string> stringStorage = GenericStorage<string>.Create("Hello, Generics!");
+// GenericStorage<double> doubleStorage = GenericStorage<double>.Create(44.69);
 
-Console.WriteLine($"Stored integer: {intStorage.GetItem()}");
-Console.WriteLine($"Stored string: {stringStorage.GetItem()}");
-Console.WriteLine($"Stored double: {doubleStorage.GetItem()}");
+// Console.WriteLine($"Stored integer: {intStorage.GetItem()}");
+// Console.WriteLine($"Stored string: {stringStorage.GetItem()}");
+// Console.WriteLine($"Stored double: {doubleStorage.GetItem()}");
+
+BasicException basicException = new BasicException();
+// basicException.Run();
+// basicException.Divide();
+basicException.GetAge();
+
+BankAccount bankAccount = new BankAccount(0m);
+try
+{
+    bankAccount.Deposit();
+    bankAccount.Withdraw();
+
+
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine($"Invalid Input: {ex.Message}");
+}
+catch (InvalidOperationException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+Console.WriteLine($"Main Balance: #{bankAccount.GetBalance():N2}");
