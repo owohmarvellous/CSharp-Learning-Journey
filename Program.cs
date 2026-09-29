@@ -1,5 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 using Collections;
+using Generics;
 using Methods;
 using Myapp.ControFlow;
 using MyApp.ControlFlow;
@@ -171,7 +172,7 @@ Animal lion = new Lion();
 lion.animalName = "Dog";
 lion.Sound = "Barks";
 
-lion.MakeSound();
+// lion.MakeSound();
 
 // List<Student> students = new List<Student>();
 //  DisplayStudents(students)
@@ -180,4 +181,28 @@ lion.MakeSound();
 // This is the main entry point of the application. It creates an instance of the StudentManagementSystem class and calls its Run method to start the application.
 StudentManagementSystem system = new StudentManagementSystem();
 
-system.Run();
+// system.Run();
+
+//  Observe that thesame method handles int, string, bool, and double
+GenericMethods genericmethods = new GenericMethods();
+
+genericmethods.Print(143);
+genericmethods.Print("Welcome to Generics");
+genericmethods.Print(true);
+genericmethods.Print(16.3);
+
+Box<int> intBox = new Box<int>(42);
+Box<string> stringBox = new Box<string>("This is Generics in a class");
+Box<double> doubleBox = new Box<double>(3.14);
+
+intBox.PrintValue();
+stringBox.PrintValue();
+doubleBox.PrintValue();
+
+GenericStorage<int> intStorage = GenericStorage<int>.Create(455);
+GenericStorage<string> stringStorage = GenericStorage<string>.Create("Hello, Generics!");
+GenericStorage<double> doubleStorage = GenericStorage<double>.Create(44.69);
+
+Console.WriteLine($"Stored integer: {intStorage.GetItem()}");
+Console.WriteLine($"Stored string: {stringStorage.GetItem()}");
+Console.WriteLine($"Stored double: {doubleStorage.GetItem()}");
