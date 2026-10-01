@@ -6,6 +6,7 @@ using Methods;
 using Myapp.ControFlow;
 using MyApp.ControlFlow;
 using MyApp.NumberGuess;
+using Nullable;
 // using OOP;
 // using OOP.StudentManagementS;
 // IfStatement.Run();
@@ -185,12 +186,12 @@ using MyApp.NumberGuess;
 // system.Run();
 
 //  Observe that thesame method handles int, string, bool, and double
-GenericMethods genericmethods = new GenericMethods();
+// GenericMethods genericmethods = new GenericMethods();
 
-genericmethods.Print(143);
-genericmethods.Print("Welcome to Generics");
-genericmethods.Print(true);
-genericmethods.Print(16.3);
+// genericmethods.Print(143);
+// genericmethods.Print("Welcome to Generics");
+// genericmethods.Print(true);
+// genericmethods.Print(16.3);
 
 // Box<int> intBox = new Box<int>(42);
 // Box<string> stringBox = new Box<string>("This is Generics in a class");
@@ -208,25 +209,29 @@ genericmethods.Print(16.3);
 // Console.WriteLine($"Stored string: {stringStorage.GetItem()}");
 // Console.WriteLine($"Stored double: {doubleStorage.GetItem()}");
 
-BasicException basicException = new BasicException();
-// basicException.Run();
-// basicException.Divide();
-basicException.GetAge();
+// BasicException basicException = new BasicException();
+// // basicException.Run();
+// // basicException.Divide();
+// basicException.GetAge();
 
-BankAccount bankAccount = new BankAccount(0m);
-try
-{
-    bankAccount.Deposit();
-    bankAccount.Withdraw();
+// BankAccount bankAccount = new BankAccount(0m);
+// try
+// {
+//     bankAccount.Deposit();
+//     bankAccount.Withdraw();
 
 
-}
-catch (ArgumentException ex)
-{
-    Console.WriteLine($"Invalid Input: {ex.Message}");
-}
-catch (InvalidOperationException ex)
-{
-    Console.WriteLine(ex.Message);
-}
-Console.WriteLine($"Main Balance: #{bankAccount.GetBalance():N2}");
+// }
+// catch (ArgumentException ex)
+// {
+//     Console.WriteLine($"Invalid Input: {ex.Message}");
+// }
+// catch (InvalidOperationException ex)
+// {
+//     Console.WriteLine(ex.Message);
+// }
+// Console.WriteLine($"Main Balance: #{bankAccount.GetBalance():N2}");
+
+User user = new User();
+user.DisplayContact();
+

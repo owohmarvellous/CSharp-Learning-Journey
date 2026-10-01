@@ -36,9 +36,9 @@ My goal is to become highly proficient in:
 - [x] Collections
 - [x] Classes & Objects
 - [x] Object-Oriented Programming
-- [ ] Exception Handling
+- [x] Exception Handling
+- [x] Generics
 - [ ] LINQ
-- [ ] Generics
 - [ ] Delegates & Events
 - [ ] Asynchronous Programming
 
