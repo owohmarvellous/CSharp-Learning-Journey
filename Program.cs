@@ -7,6 +7,7 @@ using Myapp.ControFlow;
 using MyApp.ControlFlow;
 using MyApp.NumberGuess;
 using Nullable;
+using Delegates;
 // using OOP;
 // using OOP.StudentManagementS;
 // IfStatement.Run();
@@ -232,6 +233,12 @@ using Nullable;
 // }
 // Console.WriteLine($"Main Balance: #{bankAccount.GetBalance():N2}");
 
-User user = new User();
-user.DisplayContact();
+// User user = new User();
+// user.DisplayContact();
+
+BasicDelegates basicDelegates = new BasicDelegates();
+basicDelegates.Run();
+
+DelegatesCalculator delegatesCalculator = new DelegatesCalculator();
+delegatesCalculator.Run();
 
