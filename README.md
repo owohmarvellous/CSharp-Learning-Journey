@@ -38,8 +38,8 @@ My goal is to become highly proficient in:
 - [x] Object-Oriented Programming
 - [x] Exception Handling
 - [x] Generics
+- [x] Delegates & Events
 - [ ] LINQ
-- [ ] Delegates & Events
 - [ ] Asynchronous Programming
 
 ### .NET & ASP.NET Core
@@ -130,4 +130,4 @@ I will continuously update this repository as I learn new concepts and build new
 
 **Started:** 2026
 
-**Current Focus:** Object Oriented Programming
+**Current Focus:** Lambda Exppressions

@@ -8,6 +8,7 @@ using MyApp.ControlFlow;
 using MyApp.NumberGuess;
 using Nullable;
 using Delegates;
+using Lambdas;
 // using OOP;
 // using OOP.StudentManagementS;
 // IfStatement.Run();
@@ -241,4 +242,7 @@ basicDelegates.Run();
 
 DelegatesCalculator delegatesCalculator = new DelegatesCalculator();
 delegatesCalculator.Run();
+
+LambdaExamples examples = new LambdaExamples();
+examples.Run();
 
