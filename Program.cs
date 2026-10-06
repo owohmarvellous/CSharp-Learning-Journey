@@ -9,6 +9,7 @@ using MyApp.NumberGuess;
 using Nullable;
 using Delegates;
 using Lambdas;
+using LINQ;
 // using OOP;
 // using OOP.StudentManagementS;
 // IfStatement.Run();
@@ -238,11 +239,16 @@ using Lambdas;
 // user.DisplayContact();
 
 BasicDelegates basicDelegates = new BasicDelegates();
-basicDelegates.Run();
+// basicDelegates.Run();
 
 DelegatesCalculator delegatesCalculator = new DelegatesCalculator();
-delegatesCalculator.Run();
+// delegatesCalculator.Run();
 
 LambdaExamples examples = new LambdaExamples();
-examples.Run();
+// examples.Run();
 
+BasicLinq basicLinq = new BasicLinq();
+basicLinq.Run();
+
+Student student = new Student();
+student.StudentScore();
