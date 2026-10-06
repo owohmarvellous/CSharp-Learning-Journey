@@ -10,6 +10,7 @@ using Nullable;
 using Delegates;
 using Lambdas;
 using LINQ;
+using Employees;
 // using OOP;
 // using OOP.StudentManagementS;
 // IfStatement.Run();
@@ -238,17 +239,20 @@ using LINQ;
 // User user = new User();
 // user.DisplayContact();
 
-BasicDelegates basicDelegates = new BasicDelegates();
-// basicDelegates.Run();
+// BasicDelegates basicDelegates = new BasicDelegates();
+// // basicDelegates.Run();
 
-DelegatesCalculator delegatesCalculator = new DelegatesCalculator();
-// delegatesCalculator.Run();
+// DelegatesCalculator delegatesCalculator = new DelegatesCalculator();
+// // delegatesCalculator.Run();
 
-LambdaExamples examples = new LambdaExamples();
-// examples.Run();
+// LambdaExamples examples = new LambdaExamples();
+// // examples.Run();
 
-BasicLinq basicLinq = new BasicLinq();
-basicLinq.Run();
+// BasicLinq basicLinq = new BasicLinq();
+// basicLinq.Run();
 
-Student student = new Student();
-student.StudentScore();
+// Student student = new Student();
+// student.StudentScore();
+
+EmployeeManagentSystem employeeManagementSystem = new EmployeeManagentSystem();
+employeeManagementSystem.Run();
