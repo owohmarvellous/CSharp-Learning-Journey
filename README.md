@@ -40,7 +40,7 @@ My goal is to become highly proficient in:
 - [x] Generics
 - [x] Delegates & Events
 - [x] LINQ
-- [ ] Asynchronous Programming
+- [x] Asynchronous Programming
 
 ### .NET & ASP.NET Core
 
@@ -87,8 +87,8 @@ MyApp/
 | For Loops         | ✅ Completed          |
 | While Loops       | ✅ Completed          |
 | Methods           | ✅ Completed          |
-| OOP               | 🔄 Currently Learning |
-| ASP.NET Core      | ⏳ Upcoming           |
+| OOP               | ✅ Completed          |
+| ASP.NET Core      | 🔄 Currently Learning |
 
 ## 🛠️ Tools
 
