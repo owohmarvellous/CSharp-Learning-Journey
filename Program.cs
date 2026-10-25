@@ -11,6 +11,8 @@ using Delegates;
 using Lambdas;
 using LINQ;
 using Employees;
+using Async;
+using FileHandling;
 // using OOP;
 // using OOP.StudentManagementS;
 // IfStatement.Run();
@@ -254,5 +256,16 @@ using Employees;
 // Student student = new Student();
 // student.StudentScore();
 
-EmployeeManagentSystem employeeManagementSystem = new EmployeeManagentSystem();
-employeeManagementSystem.Run();
+// EmployeeManagentSystem employeeManagementSystem = new EmployeeManagentSystem();
+// employeeManagementSystem.Run();
+
+// BasicAsync basicAsync = new();
+// await basicAsync.Run();
+
+// TaskExamples examples = new TaskExamples();
+// await examples.RunAllExamplesAsync();
+
+FileExamples fileExamples = new FileExamples();
+fileExamples.WriteToFile();
+fileExamples.ReadFromFile();
+fileExamples.AppendFiles();
