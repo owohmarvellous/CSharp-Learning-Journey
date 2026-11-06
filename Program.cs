@@ -13,6 +13,8 @@ using LINQ;
 using Employees;
 using Async;
 using FileHandling;
+using DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 // using OOP;
 // using OOP.StudentManagementS;
 // IfStatement.Run();
@@ -269,3 +271,23 @@ FileExamples fileExamples = new FileExamples();
 fileExamples.WriteToFile();
 fileExamples.ReadFromFile();
 fileExamples.AppendFiles();
+
+
+
+// 1. Create the service collection
+var services = new ServiceCollection();
+
+// 2. Register the dependency
+services.AddTransient<INotificationService, EmailNotificationService>();
+
+// 3. Register EmployeeManager
+services.AddTransient<EmployeeManager>();
+
+// 4. Build the service provider
+var serviceProvider = services.BuildServiceProvider();
+
+// 5. Resolve EmployeeManager
+var employeeManager = serviceProvider.GetRequiredService<EmployeeManager>();
+
+// 6. Run the method
+employeeManager.NotifyEmployee();
