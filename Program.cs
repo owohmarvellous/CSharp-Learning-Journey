@@ -291,3 +291,49 @@ var employeeManager = serviceProvider.GetRequiredService<EmployeeManager>();
 
 // 6. Run the method
 employeeManager.NotifyEmployee();
+
+
+
+Console.WriteLine("===== DAY 28 ASSESSMENT =====\n");
+
+// Challenge 1
+SalaryAnalyzer.Analyze();
+
+Console.WriteLine("\n===== BANK ACCOUNT =====");
+
+BankAccount account = new BankAccount("Chijindu", 50000m);
+
+try
+{
+    account.Deposit(20000m);
+    account.Withdraw(10000m);
+
+    Console.WriteLine($"Balance: ₦{account.GetBalance():N2}");
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
+
+
+// Challenge 5
+Console.WriteLine("\n===== EXPENSE TRACKER =====");
+
+ExpenseTracker tracker = new ExpenseTracker();
+
+tracker.AddExpense("Internet subscription", "Utilities", 15000m);
+tracker.AddExpense("Groceries", "Food", 25000m);
+tracker.AddExpense("Transportation", "Transport", 10000m);
+
+tracker.ViewExpenses();
+
+tracker.CalculateTotal();
+
+tracker.FilterByCategory("Food");
+
+tracker.SearchExpense("Internet");
+
+tracker.DeleteExpense(2);
+
+tracker.ViewExpenses();
