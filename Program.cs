@@ -1,20 +1,22 @@
-﻿using System.Runtime.CompilerServices;
-using Collections;
-using ExceptionHandling;
-using Generics;
-using Methods;
-using Myapp.ControFlow;
-using MyApp.ControlFlow;
-using MyApp.NumberGuess;
-using Nullable;
-using Delegates;
-using Lambdas;
-using LINQ;
-using Employees;
-using Async;
-using FileHandling;
-using DependencyInjection;
+﻿// using System.Runtime.CompilerServices;
+// using Collections;
+// using ExceptionHandling;
+// using Generics;
+// using Methods;
+// using Myapp.ControFlow;
+// using MyApp.ControlFlow;
+// using MyApp.NumberGuess;
+// using Nullable;
+// using Delegates;
+// using Lambdas;
+// using LINQ;
+// using Employees;
+// using Async;
+// using FileHandling;
+// using DependencyInjection;
+using MyApp.ExpenseTracker;
 using Microsoft.Extensions.DependencyInjection;
+using MyApp.ExpenseTracker.Services;
 // using OOP;
 // using OOP.StudentManagementS;
 // IfStatement.Run();
@@ -267,73 +269,93 @@ using Microsoft.Extensions.DependencyInjection;
 // TaskExamples examples = new TaskExamples();
 // await examples.RunAllExamplesAsync();
 
-FileExamples fileExamples = new FileExamples();
-fileExamples.WriteToFile();
-fileExamples.ReadFromFile();
-fileExamples.AppendFiles();
+// FileExamples fileExamples = new FileExamples();
+// fileExamples.WriteToFile();
+// fileExamples.ReadFromFile();
+// fileExamples.AppendFiles();
 
 
 
-// 1. Create the service collection
-var services = new ServiceCollection();
+// // 1. Create the service collection
+// var services = new ServiceCollection();
 
-// 2. Register the dependency
-services.AddTransient<INotificationService, EmailNotificationService>();
+// // 2. Register the dependency
+// services.AddTransient<INotificationService, EmailNotificationService>();
+// services.AddSingleton<MyApp.ExpenseTracker.Services.ExpenseService>();
+// services.AddTransient<MyApp.ExpenseTracker.ExpenseTrackerApp>();
 
-// 3. Register EmployeeManager
-services.AddTransient<EmployeeManager>();
+// // 3. Register EmployeeManager
+// services.AddTransient<EmployeeManager>();
 
-// 4. Build the service provider
-var serviceProvider = services.BuildServiceProvider();
+// // 4. Build the service provider
+// var serviceProvider = services.BuildServiceProvider();
 
-// 5. Resolve EmployeeManager
-var employeeManager = serviceProvider.GetRequiredService<EmployeeManager>();
+// // 5. Resolve EmployeeManager
+// var employeeManager = serviceProvider.GetRequiredService<EmployeeManager>();
 
-// 6. Run the method
-employeeManager.NotifyEmployee();
-
-
-
-Console.WriteLine("===== DAY 28 ASSESSMENT =====\n");
-
-// Challenge 1
-SalaryAnalyzer.Analyze();
-
-Console.WriteLine("\n===== BANK ACCOUNT =====");
-
-BankAccount account = new BankAccount("Chijindu", 50000m);
-
-try
-{
-    account.Deposit(20000m);
-    account.Withdraw(10000m);
-
-    Console.WriteLine($"Balance: ₦{account.GetBalance():N2}");
-}
-catch (Exception ex)
-{
-    Console.WriteLine(ex.Message);
-}
+// // 6. Run the method
+// employeeManager.NotifyEmployee();
 
 
 
-// Challenge 5
-Console.WriteLine("\n===== EXPENSE TRACKER =====");
+// Console.WriteLine("===== DAY 28 ASSESSMENT =====\n");
 
-ExpenseTracker tracker = new ExpenseTracker();
+// // Challenge 1
+// SalaryAnalyzer.Analyze();
 
-tracker.AddExpense("Internet subscription", "Utilities", 15000m);
-tracker.AddExpense("Groceries", "Food", 25000m);
-tracker.AddExpense("Transportation", "Transport", 10000m);
+// Console.WriteLine("\n===== BANK ACCOUNT =====");
 
-tracker.ViewExpenses();
+// BankAccount account = new BankAccount("Chijindu", 50000m);
 
-tracker.CalculateTotal();
+// try
+// {
+//     account.Deposit(20000m);
+//     account.Withdraw(10000m);
 
-tracker.FilterByCategory("Food");
+//     Console.WriteLine($"Balance: ₦{account.GetBalance():N2}");
+// }
+// catch (Exception ex)
+// {
+//     Console.WriteLine(ex.Message);
+// }
 
-tracker.SearchExpense("Internet");
 
-tracker.DeleteExpense(2);
 
-tracker.ViewExpenses();
+// // Challenge 5
+// Console.WriteLine("\n===== EXPENSE TRACKER =====");
+
+// ExpenseTracker tracker = new ExpenseTracker();
+
+// tracker.AddExpense("Internet subscription", "Utilities", 15000m);
+// tracker.AddExpense("Groceries", "Food", 25000m);
+// tracker.AddExpense("Transportation", "Transport", 10000m);
+
+// tracker.ViewExpenses();
+
+// tracker.CalculateTotal();
+
+// tracker.FilterByCategory("Food");
+
+// tracker.SearchExpense("Internet");
+
+// tracker.DeleteExpense(2);
+
+// tracker.ViewExpenses();
+
+
+
+// var services = new ServiceCollection();
+
+// services.AddSingleton<ExpenseService>();
+// services.AddTransient<ExpenseTrackerApp>();
+
+// using var provider = services.BuildServiceProvider();
+
+// var app = provider.GetRequiredService<ExpenseTrackerApp>();
+// app.Run();
+
+var httpClient = new HttpClient();
+var httpClientPractice = new HttpClientPractice(httpClient);
+await httpClientPractice.RunAsync();
+var httpMethodsPractice = new HttpMethodsPractice(httpClient);
+await httpMethodsPractice.RunAsync();
